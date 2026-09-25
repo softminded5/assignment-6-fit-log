@@ -1,11 +1,24 @@
-import React from 'react';
+import Banner from "./components/Banner";
+import ExerciseList from "./components/ExerciseList";
 
-const page = () => {
+
+
+const Page = async () => {
+  const response = await fetch("https://api.abcz.workers.dev/api/fitlog");
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch exercises");
+  }
+
+  const exercises = await response.json();
+
   return (
     <div>
-      Ok
+      <Banner />
+
+      <ExerciseList exercises={exercises} />
     </div>
   );
 };
 
-export default page;
+export default Page;

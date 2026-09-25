@@ -68,8 +68,32 @@ const Navbar = () => {
 
 
         <div className="navbar-end gap-2">
-          <a>Plan</a>
-          <a>Saved</a>
+          <Link
+            href="/my-plan"
+            className="relative">
+
+            My Plan
+
+            {plan.length > 0 && (
+              <span className="ml-2 rounded-full bg-[#baff00] px-2 py-1 text-xs font-bold text-black">
+                {plan.length}
+              </span>
+            )}
+          </Link>
+
+
+          <Link
+            href="/myPlanPage"
+            className="relative"
+          >
+            Saved
+
+            {savedExercises.length > 0 && (
+              <span className="ml-2 rounded-full bg-[#baff00] px-2 py-1 text-xs font-bold text-black">
+                {savedExercises.length}
+              </span>
+            )}
+          </Link>
 
 
         </div>

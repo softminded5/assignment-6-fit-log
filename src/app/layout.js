@@ -3,6 +3,9 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Banner from "./components/Banner";
+import { PlanProvider } from "./context/PlanContext";
+import { Toaster } from "sonner";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,13 +31,17 @@ export default function RootLayout({ children }) {
 >
       <body className="min-h-full flex flex-col">
 
+        <PlanProvider>
         <Navbar></Navbar>
+        
 
         <main>
           {children}
         </main>
+        <Toaster position="top-right" />
 
         <Footer></Footer>
+        </PlanProvider>
 
       </body>
     </html>

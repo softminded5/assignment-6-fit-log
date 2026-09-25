@@ -1,11 +1,8 @@
 import React from 'react';
+import MyPlan from "../components/MyPlan";
 
 const MyPlanPage = () => {
-    return (
-        <div>
-            <h2>My plan</h2>
-        </div>
-    );
+  return <MyPlan />;
 };
 
 export default MyPlanPage;

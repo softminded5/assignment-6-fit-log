@@ -1,11 +1,16 @@
+"use client";
+
 import ExerciseCard from "./ExerciseCard";
+import { usePlan } from "../context/PlanContext";
 
 const ExerciseList = ({ exercises }) => {
+  const { addToPlan } = usePlan();
+
   return (
     <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
       <div className="flex-col justify-items-start mb-5" >
         <h2 className="text-3xl font-bold ">
-        THE LIBRARY
+          THE LIBRARY
         </h2>
 
         <p className="mt-2 text-gray-500">
@@ -18,6 +23,7 @@ const ExerciseList = ({ exercises }) => {
           <ExerciseCard
             key={exercise.id}
             exercise={exercise}
+            onAdd={addToPlan}
           />
         ))}
       </div>

@@ -16,7 +16,7 @@ const Banner = () => {
 
                 <p className="mt-4 max-w-xl text-sm leading-6 text-gray-400 sm:text-base">FitLog is a dark, no-nonsense gym companion: pick a lift, lock it into today's plan, and watch the week's work add up.</p>
 
-                    <button className="mt-5 rounded-md bg-[#baff00] px-5 py-3 text-[10px] font-bold uppercase text-black transition hover:bg-[#ceea7f]">BROWSE WORKOUTS</button>
+                    <button className="mt-5 rounded-md bg-[#baff00] px-5 py-3 text-[10px] font-bold uppercase text-shadow-lime-400 transition hover:bg-[#ceea7f]">BROWSE WORKOUTS</button>
             </div>
 
             <div className="mt-6 flex justify-center lg:mt-0 lg:flex-1 lg:justify-end">

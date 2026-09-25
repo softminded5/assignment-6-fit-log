@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-
 const ExerciseCard = ({ exercise }) => {
+
     return (
         <Link href={`/exercises/${exercise.id}`}>
             <div className="group overflow-hidden rounded-3xl border border-[#252830] bg-[#262d3de2] shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
@@ -65,6 +65,20 @@ const ExerciseCard = ({ exercise }) => {
 
                         </div>
                     </div>
+
+                    {/* <button
+                        type="button"
+                        onClick={(event) => {
+                            event.preventDefault();
+                            event.stopPropagation();
+                            onAdd(exercise);
+                        }}
+                        className="mt-5 w-full rounded-xl bg-green-600 px-4 py-3 text-sm font-bold text-white transition hover:bg-green-700"
+                    >
+                        Add to Plan
+                    </button> */}
+
+
                 </div>
             </div>
         </Link>

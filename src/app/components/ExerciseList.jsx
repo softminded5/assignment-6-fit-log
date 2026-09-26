@@ -13,12 +13,12 @@ const ExerciseList = ({ exercises }) => {
           THE LIBRARY
         </h2>
 
-        <p className="mt-2 text-gray-500">
+        <p className="mt-2 text-gray-300">
           Twelve lifts covering every major muscle group.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {exercises.map((exercise) => (
           <ExerciseCard
             key={exercise.id}

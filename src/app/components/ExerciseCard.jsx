@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const ExerciseCard = ({ exercise }) => {
@@ -7,9 +8,11 @@ const ExerciseCard = ({ exercise }) => {
             <div className="group overflow-hidden rounded-3xl border border-[#252830] bg-[#262d3de2] shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
                 {/* Image */}
                 <div className="relative h-64 overflow-hidden">
-                    <img
+                    <Image
                         src={exercise.image}
                         alt={exercise.name}
+                        width={800}
+                        height={600}
                         className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
 
@@ -47,36 +50,26 @@ const ExerciseCard = ({ exercise }) => {
                     <div className="mt-5 flex items-center justify-between border-t border-gray-100 pt-4 text-sm">
                         <div>
                             <p className="mt-4 line-clamp-2 text-xs leading-6 text-gray-300">
-                                {exercise.duration} min
+                                🕒{exercise.duration} min
                             </p>
                         </div>
 
                         <div>
                             <p className="mt-4 line-clamp-2 text-xs leading-6 text-gray-300">
-                                {exercise.caloriesBurned} Kcal
+                                🔥{exercise.caloriesBurned} Kcal
                             </p>
 
                         </div>
 
                         <div>
                             <p className="mt-4 line-clamp-2 text-xs leading-6 text-gray-300">
-                                {exercise.sets} × {exercise.reps}      Sets / Reps
+                                💪{exercise.sets} × {exercise.reps}      Sets / Reps
                             </p>
 
                         </div>
                     </div>
 
-                    {/* <button
-                        type="button"
-                        onClick={(event) => {
-                            event.preventDefault();
-                            event.stopPropagation();
-                            onAdd(exercise);
-                        }}
-                        className="mt-5 w-full rounded-xl bg-green-600 px-4 py-3 text-sm font-bold text-white transition hover:bg-green-700"
-                    >
-                        Add to Plan
-                    </button> */}
+                
 
 
                 </div>

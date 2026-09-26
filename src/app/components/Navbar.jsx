@@ -11,7 +11,7 @@ const Navbar = () => {
   const { plan, savedExercises } = usePlan();
 
   const links = <>
-    <li>
+    <li className="text-[#baff00]">
       <Link href="/">Workouts</Link>
     </li>
 
@@ -20,8 +20,8 @@ const Navbar = () => {
     </li>
   </>
   return (
-    <nav>
-      <div className="navbar bg-base-100 shadow-sm">
+    <nav >
+      <div className="navbar bg-base-500 shadow-md mx-auto max-w-7xl px-4  sm:px-6 lg:px-8">
 
         <div className="navbar-start">
           <div className="dropdown">
@@ -56,7 +56,7 @@ const Navbar = () => {
           </div>
 
           <Logo />
-          <h2 className='text-3xl text-bold p-2'>FITLOG</h2>
+          <h2 className='text-2xl font-medium p-2'>FITLOG</h2>
         </div>
 
         <div className="navbar-center hidden md:flex">
@@ -83,13 +83,13 @@ const Navbar = () => {
 
 
           <Link
-            href="/myPlanPage"
+            href="/my-plan"
             className="relative"
           >
             Saved
 
             {savedExercises.length > 0 && (
-              <span className="ml-2 rounded-full bg-[#baff00] px-2 py-1 text-xs font-bold text-black">
+              <span className="ml-2 rounded-full border px-2 py-1 text-xs font-bold ">
                 {savedExercises.length}
               </span>
             )}

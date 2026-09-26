@@ -1,5 +1,6 @@
 
 import PlanActions from "../../components/PlanActions";
+import Image from "next/image";
 
 
 
@@ -21,10 +22,12 @@ const ExerciseDetails = async ({ params }) => {
             <div className="grid gap-10 md:grid-cols-2 py-20">
                 {/* Image */}
                 <div className="overflow-hidden rounded-3xl">
-                    <img
+                    <Image
                         src={exercise.image}
                         alt={exercise.name}
-                        className="h-full max-h-[600px] w-full object-cover"
+                        width={1200}
+                        height={1200}
+                        className="h-full max-h-150 w-full object-cover"
                     />
                 </div>
 

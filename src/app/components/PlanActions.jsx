@@ -49,7 +49,7 @@ const PlanActions = ({ exercise }) => {
                 onClick={handleAdd}
                 className="mt-5 rounded-md bg-[#baff00] px-5 py-3 text-sm font-bold uppercase text-black transition hover:bg-[#ceea7f]"
             >
-                Add to today&apos;s plan
+               ➕📋 Add to today&apos;s plan
             </button>
 
             <button
@@ -57,7 +57,7 @@ const PlanActions = ({ exercise }) => {
                 onClick={handleSave}
                 className="mt-5 ml-5 rounded-md border px-5 py-3 text-sm font-bold uppercase transition hover:bg-[#ceea7f] hover:text-lime-400"
             >
-                {alreadySaved ? "Remove from saved" : "Save for later"}
+                {alreadySaved ? "❌ Remove from saved" : "🔖 Save for later"}
             </button>
         </div>
     );

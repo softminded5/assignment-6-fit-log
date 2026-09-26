@@ -42,28 +42,19 @@ const PlanWorkoutCard = ({ exercise, onRemove, onDone, isSaved }) => {
             <div className="flex flex-wrap gap-2 sm:flex-col lg:flex-row">
                 <Link
                     href={`/exercises/${exercise.id}`}
-                    className="rounded-lg border border-gray-200 px-3 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50"
+                    className="rounded-lg border border-gray-200 px-3 py-2 text-sm font-medium text-gray-700 transition hover:bg-[#678c02]"
                 >
                     View Details
                 </Link>
-
-
-                {/* <button
-                    type="button"
-                    onClick={() => onDone(exercise.id)}
-                    className="rounded-lg bg-lime-300 px-3 py-2 text-sm font-semibold text-white transition hover:bg-green-700"
-                >
-                    Mark as Done
-                </button> */}
 
 
                 {!isSaved && (
                     <button
                         type="button"
                         onClick={() => onDone(exercise.id)}
-                        className="rounded-lg bg-lime-300 px-3 py-2 text-sm font-semibold text-white transition hover:bg-green-700"
+                        className="rounded-lg bg-[#baff00] px-3 py-2 text-sm font-semibold text-black transition hover:bg-[#678c02]"
                     >
-                        Mark as Done
+                       ✔︎ Mark as Done
                     </button>
                 )}
 
